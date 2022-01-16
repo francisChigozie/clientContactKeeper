@@ -33,7 +33,7 @@ const AuthState = props => {
         }
 
       try {
-          const res = await axios.get('http://localhost:5000/api/auth');
+          const res = await axios.get('https://backendcontactkeeper.herokuapp.com/api/auth');
 
           dispatch({ 
               type: USER_LOADED,
@@ -54,7 +54,7 @@ const AuthState = props => {
         }
 
         try {
-            const res = await axios.post('http://localhost:5000/api/users', FormData, config);
+            const res = await axios.post('https://backendcontactkeeper.herokuapp.com/api/users', FormData, config);
 
             dispatch({
                 type: REGISTER_SUCCESS,
@@ -80,7 +80,7 @@ const AuthState = props => {
         }
 
         try {
-            const res = await axios.post('http://localhost:5000/api/auth', FormData, config);
+            const res = await axios.post('https://backendcontactkeeper.herokuapp.com/api/auth', FormData, config);
 
             dispatch({
                 type: LOGIN_SUCCESS,
